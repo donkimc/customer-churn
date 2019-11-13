@@ -2,7 +2,7 @@
 
 1. Determine any outlier values (records) for each of the attributes
 
- 
+ tutorial: https://www.youtube.com/watch?v=7bYBN1M_3UA
  
  
 2. Analyze the distribution of numeric attributes (normal or other).
