@@ -21,5 +21,22 @@
 
 
 
+#Predictive Modeling
+5 classification algorithms in weka
+1. Logistic Regression
+2. Naive Bayes
+3. Decision Tree
+4. k-Nearest Neighbors
+5. Support Vector Machines
+
+Ref: https://machinelearningmastery.com/use-classification-machine-learning-algorithms-weka/
+
+1. Naive Bayes
+Tutorial https://scienceprog.com/building-and-evaluating-naive-bayes-classifier-with-weka/
+
+2. Decision Tree
+Tutorial http://technobium.com/decision-trees-explained-using-weka/
+
+
 
  
