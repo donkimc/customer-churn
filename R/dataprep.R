@@ -7,4 +7,18 @@ gc <- read.csv("R/churn.csv",header = TRUE, stringsAsFactors = FALSE,
 str(gc)
 summary(gc)
 
-cor(gc) #error / only numeric comparison
+#Boxplot
+boxplot(gc$Account.Length)
+boxplot(gc$VMail.Message)
+boxplot(gc$Day.Mins)
+boxplot(gc$Day.Calls)
+
+#correlation
+dat <- replace(as.character(gc$Churn.),gc$Churn.=="False.",0)
+dat <- replace(as.character(dat),dat=="True.",1)
+churn <- as.numeric(dat)
+
+cor(churn,gc$Account.Length)
+cor(churn,gc$VMail.Message)
+cor(churn,gc[,2:20])
+
