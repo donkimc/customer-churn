@@ -2,4 +2,6 @@
 #getwd()
 ds <- read.csv("R/churn.csv", header = TRUE)
 summary(ds$Account.Length)
-boxplot(ds$Account.Length)
+outlier<-boxplot(ds$Account.Length)$out
+newds<-ds[-c(which(ds$Account.Length==outlier)),]
+
