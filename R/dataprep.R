@@ -30,10 +30,11 @@ outl_remove <- function(gcc) {
   for (i in x) {
     z <- scale(gc[,i],center=TRUE, scale=TRUE)
     m <- median(gc[,i])
+    print(m)
     gcc[which(z>2),i] <- m #right
     gcc[which(z<(-2)),i] <- m #left
   }
-  gcc
+  temp <- gcc
 }
 
 #draw multiple boxplots
