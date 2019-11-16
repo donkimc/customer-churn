@@ -33,9 +33,15 @@ dat <- replace(as.character(gc$Churn.),gc$Churn.=="False.",0)
 dat <- replace(as.character(dat),dat=="True.",1)
 churn <- as.numeric(dat)
 
-cor(churn,gc$Account.Length)
-cor(churn,gc$VMail.Message)
-cor(churn,gc[,2:20])
+corr <- function (gcc) {
+  x <- c(2,7:20)
+  for (i in x) {
+    print(cor(churn,gc[i]))
+  }
+}
+
+corr(gc)
+
 
 
 ds <- read.csv("R/churn.csv", header = TRUE)
