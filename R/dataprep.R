@@ -2,3 +2,4 @@
 #getwd()
 ds <- read.csv("R/churn.csv", header = TRUE)
 summary(ds$Account.Length)
+boxplot(ds$Account.Length)
