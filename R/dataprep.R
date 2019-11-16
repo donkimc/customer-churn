@@ -35,7 +35,14 @@ outl_remove <- function(gcc) {
   }
 }
 
-plot_boxplot <- function()
+plot_boxplots <- function(gcc) {
+  x <- c(2,7:20)
+  par(mfrow=c(4,4))
+  for (i in x) {
+    boxplot(gc[i],main=names(gc[i]))
+  }
+}
+plot_boxplots(gc)
 
 #boxplot(gc$Account.Length)
 ds <- read.csv("R/churn.csv", header = TRUE)
