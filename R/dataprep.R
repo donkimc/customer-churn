@@ -22,3 +22,4 @@ cor(churn,gc$Account.Length)
 cor(churn,gc$VMail.Message)
 cor(churn,gc[,2:20])
 
+
