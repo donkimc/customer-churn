@@ -25,6 +25,23 @@ print("Number of ",length(out_right))
 gc$Account.Length[out_right] <- m
 gc$Account.Length[out_left] <- m
 
+outl_remove <- function(gcc) {
+  x <- c(2,7:20)
+  for (i in x) {
+    z <- scale(gc[i],center=TRUE, scale=TRUE)
+    m <- median(gc[i])
+    gc[i,which(z>2)] <- m #right
+    gc[i,which(z<(-2))] <- m #left
+  }
+}
+
+plot_boxplot <- function()
+
+#boxplot(gc$Account.Length)
+ds <- read.csv("R/churn.csv", header = TRUE)
+summary(ds$Account.Length)
+outlier<-boxplot(ds$Account.Length)$out
+newds<-ds[-c(which(ds$Account.Length==outlier)),]
 
 
 
@@ -44,9 +61,6 @@ corr(gc)
 
 
 
-ds <- read.csv("R/churn.csv", header = TRUE)
-summary(ds$Account.Length)
-outlier<-boxplot(ds$Account.Length)$out
-newds<-ds[-c(which(ds$Account.Length==outlier)),]
+
 
 
